@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({
 }))
 
 const routes = require("./routes")
-app.use(routes)
+app.use("/", routes)
 
 
 
