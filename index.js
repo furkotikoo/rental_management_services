@@ -7,10 +7,11 @@ app.use(bodyParser.urlencoded({
     extended: true
 }))
 
-const routes = require("./routes")
-app.use("/", routes)
-
-
+const { routerRoom, routerGuest, routerHotel, routerReservation } = require("./routes")
+app.use(routerRoom)
+app.use(routerGuest)
+app.use(routerHotel)
+app.use(routerReservation)
 
 const PORT = 3000;
 app.listen(PORT, () => { console.log(`app listening PORT ${PORT}`) })
